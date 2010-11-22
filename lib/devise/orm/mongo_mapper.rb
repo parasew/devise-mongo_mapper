@@ -40,3 +40,8 @@ module MongoMapper
     end
   end
 end
+
+MongoMapper::Document::ClassMethods.class_eval do
+  include Devise::Models
+  include Devise::Orm::MongoMapper::Hook
+end
